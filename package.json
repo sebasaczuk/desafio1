@@ -1,11 +1,14 @@
 {
-  "name": "desafio1",
+  "name": "desafios",
   "version": "1.0.0",
-  "description": "primer desafio",
+  "description": "Desafios",
   "main": "class.productManager.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "file-system": "^2.2.2"
+  }
 }
