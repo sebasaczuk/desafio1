@@ -2,7 +2,7 @@ const fs = require("fs"); // Módulo de sistema de archivos
 
 class ProductManager {
   constructor(filePath) {
-    this.path = "..desafio2/js/data.json"; // Ruta del archivo que contendrá los productos
+    this.path = "data.json"; // Ruta del archivo que contendrá los productos
     this.products = this.loadProducts(); // Cargar productos desde el archivo
     this.nextId = this.calculateNextId(); // Calcular el próximo ID disponible
   }
