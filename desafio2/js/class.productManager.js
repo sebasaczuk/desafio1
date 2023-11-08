@@ -23,7 +23,7 @@ class ProductManager {
       this.products[index] = { ...this.products[index], ...updatedProduct }; // Actualizar el producto
       this.saveProducts(); // Guardar los productos actualizados en el archivo
     } else {
-      console.log("Product not found.");
+      console.log("Producto inexistente.");
     }
   }
 
@@ -34,7 +34,7 @@ class ProductManager {
       this.products.splice(index, 1); // Eliminar el producto del arreglo
       this.saveProducts(); // Guardar los productos sin el producto eliminado en el archivo
     } else {
-      console.log("Product not found.");
+      console.log("Producto inexistente.");
     }
   }
 
@@ -75,14 +75,14 @@ class ProductManager {
       if (isIdUnique) {
         return true; // Producto válido
       } else {
-        console.log("ID already exists."); // Mensaje de error si el ID ya existe
+        console.log("ID ya Existe."); // Mensaje de error si el ID ya existe
         return false;
       }
     } else {
-      console.log("All fields are mandatory."); // Mensaje de error si faltan campos obligatorios
+      console.log("Todos los campos son obligatorios."); // Mensaje de error si faltan campos obligatorios
       return false;
     }
   }
 }
 
-module.exports = ProductManager; // Exportar la clase para su uso en otros archivos
+module.exports = ProductManager; // Exporto la clase para su uso en otros archivos
