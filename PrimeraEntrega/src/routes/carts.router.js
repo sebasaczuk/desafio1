@@ -17,7 +17,7 @@ const listaAux = [];
 
 // crea Instancia del Cart Manager y setea el nombre del Archivo, el Origen de datos y la ruta
 const lc = new CartManager(farchivo);
-console.log("Se crea el Cart Manager");
+console.log("02 - Se crea el Cart Manager");
 
 cartsRouter.get("/", (req, res) => {
   lc.getCarts()
@@ -44,7 +44,7 @@ cartsRouter.get("/:id", (req, res) => {
 cartsRouter.post("/", (req, res) => {
   const newCart = new Cart(req.body);
   lc.addCart(newCart);
-  res.status(201).json("Producto agregado!");
+  res.status(201).json("Producto agregadoooo");
 });
 
 cartsRouter.post("/:cid/product/:pid", (req, res) => {
@@ -53,7 +53,7 @@ cartsRouter.post("/:cid/product/:pid", (req, res) => {
     const codProd = parseInt(req.params.pid, 10);
     lc.addProductCart(codProd, id);
     res.status(201).json({
-      message: `Carrito con ID ${id} Modificado. Se modificó la cantidad del Producto con ID ${codProd}`,
+      message: `Carrito con ID ${id} Modificado. Se modificó la cantidad del Producto con Código ${codProd}`,
     });
   } else {
     res.status(201).json("Parámetros inválidos");

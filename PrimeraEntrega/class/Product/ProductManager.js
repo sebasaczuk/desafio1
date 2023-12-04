@@ -23,7 +23,7 @@ class ProductManager {
           resolve(!!productoEncontrado);
         } else {
           console.log("El archivo no existee");
-          resolve(false); // Esto se podria cambiar según lo que querramos hacer, en caso de que el archivo no exista
+          resolve(false); // Puedes cambiar esto según lo que desees hacer en caso de que el archivo no exista
         }
       } catch (error) {
         console.error("Error:", error);
@@ -45,7 +45,7 @@ class ProductManager {
           resolve(!!productoEncontrado);
         } else {
           console.log("El archivo no existee");
-          resolve(false); // Esto tambien se podria cambiar según lo que querramos hacer, en caso de que el archivo no exista
+          resolve(false); // Puedes cambiar esto según lo que desees hacer en caso de que el archivo no exista
         }
       } catch (error) {
         console.error("Error:", error);
@@ -108,7 +108,7 @@ class ProductManager {
         }
 
         if (id >= 0 && id < this.lista.length) {
-          // Verifico si el índice es válido
+          // Verifica si el índice es válido
           const updatedProduct = new Product(
             producto.title,
             producto.description,
@@ -148,7 +148,7 @@ class ProductManager {
             (producto) => producto.code === code
           );
           if (productoIndex !== -1) {
-            // Verifico si el índice es válido
+            // Verifica si el índice es válido
             const updatedProduct = new Product(
               producto.title,
               producto.description,
@@ -160,7 +160,7 @@ class ProductManager {
               producto.category
             );
 
-            this.lista[productoIndex] = updatedProduct; // Reemplazo el elemento en la lista
+            this.lista[productoIndex] = updatedProduct; // Reemplaza el elemento en la lista
             this.fs.setArchivo(this.lista);
             console.log("Producto Actualizado");
             resolve(true);
